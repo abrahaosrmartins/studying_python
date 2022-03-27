@@ -1,13 +1,22 @@
+import random
+
 print("*********************************")
 print("Bem vindo ao jogo de adivinhação!")
 print("*********************************")
 
-numero_secreto = 42
-total_de_tentativas = 3
+numero_secreto = random.randrange(1, 101)
+total_de_tentativas = 0
+
+print("Qual será o nível de dificuldade?")
+print("(1) Fácil \n (2) Médio \n (3) Difícil")
+
+nível = int(input("Nível Definido: "))
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}" .format(rodada, total_de_tentativas))
-    chute_str = input("Digite um número entre 1 e 100: ")  # preciso declarar o tipo do input, porque input sempre retorna string
+
+    # preciso declarar o tipo do input, porque input sempre retorna string
+    chute_str = input("Digite um número entre 1 e 100: ")
     print("Você digitou: {}" .format(chute_str))
     chute = int(chute_str)
 
@@ -28,4 +37,5 @@ for rodada in range(1, total_de_tentativas + 1):
         elif menor:
             print("Você errou! Seu chute foi menor do que o numero secreto\n")
 
+print("O número secreto era {}." .format(numero_secreto))
 print("Fim de jogo!")
