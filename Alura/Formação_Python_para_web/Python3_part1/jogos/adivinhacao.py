@@ -10,7 +10,14 @@ total_de_tentativas = 0
 print("Qual será o nível de dificuldade?")
 print("(1) Fácil \n (2) Médio \n (3) Difícil")
 
-nível = int(input("Nível Definido: "))
+nivel = int(input("Nível Definido: "))
+
+if nivel == 1:
+    total_de_tentativas = 20
+elif nivel == 2:
+    total_de_tentativas = 10
+else:
+    total_de_tentativas = 5
 
 for rodada in range(1, total_de_tentativas + 1):
     print("Tentativa {} de {}" .format(rodada, total_de_tentativas))
