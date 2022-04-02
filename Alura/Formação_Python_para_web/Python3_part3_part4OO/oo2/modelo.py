@@ -41,6 +41,15 @@ class Serie(Programa):
         return f'Nome: {self.nome}\nAno: {self.ano}\nTemporadas: {self.temporadas}\nLikes: {self.likes}\n'
 
 
+class Playlist:
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self.programas = programas
+
+    def tamanho(self):
+        return len(self.programas)
+
+
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
 vingadores.dar_like()
 
