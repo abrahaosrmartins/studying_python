@@ -29,7 +29,7 @@ class Filme(Programa):
         self.duracao = duracao
 
     def __str__(self):
-        return f'Nome: {self.nome}\nAno: {self.ano}\nDuração: {self.duracao} min\nLikes: {self.likes}\n'
+        return f'{self.nome} - {self.ano} - {self.duracao} min - {self.likes} Likes'
 
 
 class Serie(Programa):
@@ -38,7 +38,7 @@ class Serie(Programa):
         self.temporadas = temporadas
 
     def __str__(self):
-        return f'Nome: {self.nome}\nAno: {self.ano}\nTemporadas: {self.temporadas}\nLikes: {self.likes}\n'
+        return f'{self.nome} - {self.ano} - {self.temporadas} temporadas - {self.likes} Likes'
 
 
 class Playlist:
